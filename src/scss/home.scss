@@ -1,0 +1,60 @@
+@import "variables.scss";
+
+.homepage {
+    background-color: $cream;
+}
+
+.parallax.homepage {
+    background-image: url("../images/parallax.jpg");
+    min-height: 50rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+   }
+
+.main-claim {
+    color: white;
+    background-color: $wine;
+    padding: 1rem 2rem;
+}
+
+.claim-header {
+    line-height: 5.9999rem
+}
+
+.ksa, .expl {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+
+.ksa {
+    background-color: $cream;
+}
+
+.single-ksa {
+    text-align: center;
+    padding-top: 2rem;
+
+    h2 {
+        padding: 3rem 0 1rem 0;
+    }
+
+}
+
+.expl {
+    background-color: white;
+    .stain {
+        position: relative;
+        img {
+            position: absolute;
+            width: 50%;
+            top: -130px;
+            right: 60px;
+        }
+    }
+    h1 {
+        padding-bottom: 4rem;
+    }
+}

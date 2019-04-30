@@ -1,1 +1,96 @@
+@import "variables.scss";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+* {
+    box-sizing: border-box;
+  }
+  
+html {
+    font-size: 62.5%;
+  }
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: $s;
+    color: $black;
+/*     background-color: $cream; */
+}
+
 img {max-width: 100%;}
+
+.admin-preview {
+    max-height: 250px;
+}
+
+.btn {
+  background-color: $wine;
+  border: 1px solid $tan;
+  color: white;
+  font-size: $xs;;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  letter-spacing: .1em;
+  padding: 0.75rem 1.6rem;
+  border-radius: 2rem;
+  position: relative;
+
+}
+
+.btn:hover {
+  background-color: $wine;
+  box-shadow: 0 6px 16px 0 rgba(0,0,0,.09);
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active {
+  background-color: $wine;
+}
+
+.fluid0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+h1 {
+  font-size: $xl;
+  font-weight: bold;
+  color: $wine;
+}
+
+h2 {
+  font-size: $l;
+  font-weight: bold;
+  color: $wine;
+}
+
+h3 {
+  font-size: $m;
+  font-weight: bold;
+  color: $wine;
+}
+
+h4 {
+  font-size: $s;
+  font-weight: bold;
+  color: $black;
+}
+
+.section-h-col {
+  padding-bottom: 4rem;
+}
+
+.section-h {
+  padding: 4rem 0;
+}
+
+.btn a {
+  color: white;
+}
+a:hover {
+  text-decoration: none!important;
+}
+
+.not-found {
+  margin-top: 15rem;
+  text-align: center;
+}

@@ -1,3 +1,135 @@
+@import "variables.scss";
+
 .event {
-    margin-top: 2rem;
+    margin-top: 5rem;
+    h1 {
+        color: $wine;
+        font-weight: bold;
+    }
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding-bottom: 1rem;
 }
+
+.event-preview {
+    min-height: 25rem;
+}
+
+
+.event-article, .event-info {
+    padding: 2rem;
+
+}
+
+.sidepannel div {
+    min-height: 100px;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    color: $black;
+    padding-top: 2rem;
+    border-bottom: 1px solid $tan; 
+    position: relative;
+}
+
+/* .sidepannel div::before {
+    content: "/";
+    color: $wine;
+    position: absolute;
+    font-weight: bold;
+    font-size: $xl;
+    top: 0px;
+    left: 0px;
+} */
+
+.more-info {
+    margin-left: auto
+}
+
+.btns-holder {
+    position: absolute;
+    bottom: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    .btn {
+        margin-right: 1.5rem;
+    }
+}
+
+.modal-body {
+    background: white;
+}
+
+.events-container {
+    padding-top: 3rem;
+    padding-bottom: 8rem;
+    background-color: $cream;
+    .spinner-border {
+      color: $wine;
+      margin: 5rem auto;
+      width: 5rem;
+      height: 5rem;
+
+    }
+}
+
+.article-btns {
+    padding:2rem;
+    .btn {
+        margin-right: 1.5rem;
+    }
+}
+
+.registration-form {
+    padding: 2rem;
+    input[type=text] {
+        border-bottom: 1px solid $tan;
+        padding-left: 1rem;     
+    };
+    input[type=number]{
+        max-width: 3rem;
+        margin-right: 1rem;
+    };
+    input {
+        background-color: transparent;
+        border-left: none;
+        border-top: none; 
+        border-right: none;
+        border-bottom: none;
+    };
+    input:focus {
+        outline-color: transparent;
+    };
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button
+    {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    label {
+        margin-right: 1rem;
+    }
+    .number-handler {
+        border: 1px solid $tan;
+        padding: 0 1rem;
+        color: $tan;
+        font-size: $m;
+    }
+    .number-handler:hover{
+        cursor: pointer;
+    }
+
+    .form-row{
+        padding: 0.5rem 0;    }
+
+    .form-btns {
+        padding-top: 1.5rem;
+        .btn {
+            margin-right: 1.5rem;
+        }
+    }
+
+}
+

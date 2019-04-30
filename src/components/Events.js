@@ -4,6 +4,7 @@ import Navigation from "./Navigation"
 import firebase from "../firebase/firebase";
 import { Spinner } from 'reactstrap';
 import "../scss/events.scss";
+import Footer from "./Footer";
 
 
 
@@ -18,7 +19,8 @@ class Events extends React.Component {
     }    
 
     componentWillMount = () => {
-        firebase.database().ref("Events").once("value").then((snapshot) => {
+        document.title="Events";
+        firebase.database().ref("Events").orderByChild('timeStamp').once("value").then((snapshot) => {
            const events = [];
 
            snapshot.forEach((childSnapshot) => {
@@ -28,7 +30,10 @@ class Events extends React.Component {
                    name: childSnapshot.val().name,
                    desc: childSnapshot.val().desc,
                    date: childSnapshot.val().date,
-                   registeredCount: childSnapshot.val().registration ? Object.values(childSnapshot.val().registration).length : 0,
+                   img:  childSnapshot.val().img,
+                   imgalt: childSnapshot.val().imgalt,
+                   registeredCount: childSnapshot.val().registration ?Object.values(childSnapshot.val().registration).map((registration) => registration.personCount).reduce((sum, value) => sum + value, 0) : 0,
+                   article: childSnapshot.val().editorHtml, 
                });
             });
            this.setState(() => ({events}));
@@ -38,16 +43,34 @@ class Events extends React.Component {
 
     render(){
         return(  
-    <div className={"container"}>
-        <Navigation />
-        {document.title="Events"}
-        <p>
-        Those are the upcomming events:</p>
-        <div className={"row"} >
-            {this.state.isFetching ? <Spinner size="sm" color="primary" children=""/> : this.state.events.map((event) => <SingleEvent  {...event} img={"/img/preview.jpg"} />)}
-        </div>
-      
-    </div>
+            <div>
+                <Navigation />
+                <div className="container-fluid events-container">
+                    <div className="container">
+                        <h1>Následující události</h1>
+                        <div className="row">
+                            <div className="col-8">
+                                <div className="row no-gutters" >
+                                    {this.state.isFetching ? <Spinner  children=""/> : this.state.events.map((event) => <SingleEvent  {...event} />)}
+                                </div>
+                            </div>
+                            <div className="col-3 offset-1">
+                                <div className="row sidepannel">
+                                    <div className="col-12">
+                                        <h3>Nevíte si rady?</h3>
+                                        <p>Zavolejte nám a my vám rádi poradíme !</p>
+                                    </div>
+                                    <div className="col-12">
+                                        <h3>Sledujte nás na sociálních sítích</h3>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <Footer />
+                </div>
 )}}
 
 export default Events;

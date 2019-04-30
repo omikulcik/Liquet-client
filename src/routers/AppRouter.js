@@ -1,26 +1,24 @@
 import React from "react";
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Home from "../components/Home";
 import Events from "../components/Events";
-import Admin from "../components/Admin";
-import AddEvent from "../components/AddEvent";
-import RegisteredTable from "../components/RegisteredTable";
-import EditEvent from "../components/EditEvent"
-import EditSingleEvent  from "../components/EditSingleEvent";
+import Contact from "../components/Contact";
+import Blog from "../components/Blog";
+import Teambuildings from "../components/Teambuildings";
+import NotFound from "../components/NotFound";
 
 
 const AppRouter = () => (
     <div>
         <BrowserRouter>
-            <div>
+            <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/events" component={Events} />
-                <Route exact path="/admin" component={Admin} />
-                <Route exact path="/admin/addevent" component={AddEvent} />
-                <Route exact path="/admin/registeredtable" component={RegisteredTable} />
-                <Route exact path="/admin/editevent" component={EditEvent} />
-                <Route exact path="/admin/editevent/:eventkey" component={EditSingleEvent} />
-            </div>
+                <Route exact path="/degustace" component={Events} />
+                <Route exact path="/kontakt" component={Contact} />
+                <Route exact path="/blog" component={Blog} />
+                <Route exact path="/oslavy-a-teambuildingy" component={Teambuildings} />
+                <Route component={NotFound} />
+            </Switch>
         </BrowserRouter>
     </div>
 );

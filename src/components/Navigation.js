@@ -9,6 +9,8 @@ import {
     Nav,
     NavItem,
 } from 'reactstrap';
+import "../scss/nav.scss";
+import logo from "../images/logov2.png"
   
   export default class Navigation extends React.Component {
     constructor(props) {
@@ -26,21 +28,32 @@ import {
     }
     render() {
       return (
-        <div>
-          <Navbar color="light" light expand="md">
-            <NavbarBrand href="/">Liquet</NavbarBrand>
-            <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
-                <NavItem>
-                    <Link to="/" className={"nav-link"}>Home</Link>
-                </NavItem>
-                <NavItem>
-                    <Link to="/events" className={"nav-link"}>events</Link>
-                </NavItem>
-              </Nav>
-            </Collapse>
-          </Navbar>
+        <div className="container-fluid nav-container">
+          <div className="container" >
+            <Navbar light expand="md">
+              <NavbarBrand href="/"><img src={logo} alt="vineon" /></NavbarBrand>
+              <NavbarToggler onClick={this.toggle} />
+              <Collapse isOpen={this.state.isOpen} navbar>
+                <Nav className="ml-auto" navbar>
+                  <NavItem>
+                      <Link to="/" className="nav-link">O nás</Link>
+                  </NavItem>
+                  <NavItem>
+                      <Link to="/degustace" className="nav-link">Degustace</Link>
+                  </NavItem>
+                  <NavItem>
+                      <Link to="/oslavy-a-teambuildingy" className="nav-link">Oslavy a teambuildingy</Link>
+                  </NavItem>
+                  <NavItem>
+                      <Link to="/blog" className="nav-link">Blog</Link>
+                  </NavItem>
+                  <NavItem>
+                      <Link to="/kontakt" className="nav-link">Kontakt</Link>
+                  </NavItem>
+                </Nav>
+              </Collapse>
+            </Navbar>
+          </div>
         </div>
       );
     }
