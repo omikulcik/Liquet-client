@@ -14,16 +14,17 @@ export default () => (
              </div>
             </div>
             <div className="row contacts">
-                <div className="col-4">
+                <div className="col-12 col-sm-6 col-md-4">
                     <b>Ondřej Mikulčík</b> <br />
                     +420 656 123 651 <br />
                     seznam@seznam.cz
                 </div>
-                <div className="col-4">
+                <div className="col-12 col-sm-6 col-md-4">
                     <b>Ondřej Mikulčík</b> <br />
                     +420 656 123 651 <br />
                     seznam@seznam.cz
-                </div>                <div className="col-4">
+                </div>
+                <div className="col-12 col-sm-6 col-md-4">
                     <b>Ondřej Mikulčík</b> <br />
                     +420 656 123 651 <br />
                     seznam@seznam.cz

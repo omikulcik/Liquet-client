@@ -49,12 +49,12 @@ class Events extends React.Component {
                     <div className="container">
                         <h1>Následující události</h1>
                         <div className="row">
-                            <div className="col-8">
+                            <div className="col-md-8 col-12">
                                 <div className="row no-gutters" >
                                     {this.state.isFetching ? <Spinner  children=""/> : this.state.events.map((event) => <SingleEvent  {...event} />)}
                                 </div>
                             </div>
-                            <div className="col-3 offset-1">
+                            <div className="col-md-3 d-none d-md-block offset-1">
                                 <div className="row sidepannel">
                                     <div className="col-12">
                                         <h3>Nevíte si rady?</h3>

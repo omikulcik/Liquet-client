@@ -12,7 +12,7 @@ import Footer from "./Footer";
 const Home = () => (
     <div>
         <Navigation />
-        <div className="container-fluid fluid0 parallax homepage">
+        <div className="container-fluid fluid0 parallax homepage d-none d-md-flex">
             <div className="container my-auto">
                 <h1 className="claim-header">
                    <span className="main-claim">Do I make you scare ?</span><br />
@@ -28,12 +28,12 @@ const Home = () => (
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-12 col-md-6">
                         <p>
                             Nepříjde mi, že bych dělal dost a tak dělám víc než kdo jinej. Jsem CMM, vyjebanej CMM. Je tu tvoje buchta vlastně už tvoje ex. Ona mi jen uklízí a vaří oběd. Prcal jsem ji jen jednou a už mě miluje ale já ji ne.
                         </p>
                     </div>
-                    <div className="col-6 stain">
+                    <div className="col-md-6 d-none d-md-flex stain">
                      <img src={stain} alt="wine-stain" />
                     </div>
                 </div>
@@ -47,17 +47,17 @@ const Home = () => (
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-4 single-ksa">
+                    <div className="col-6 col-md-4 single-ksa">
                         <img className="img-fluid" src={wineicon} alt="wine icon" />
                         <h2>If it aint about a dream</h2>
                         <p>No matter where life takes me find me with a smile, we are suited to be happy</p>
                     </div>
-                    <div className="col-4 single-ksa">
+                    <div className="col-6 col-md-4 single-ksa">
                         <img className="img-fluid" src={foodicon} alt="food icon" />
                         <h2>If it aint about a dream</h2>
                         <p>No matter where life takes me find me with a smile, we are suited to be happy</p>
                     </div>
-                    <div className="col-4 single-ksa">
+                    <div className="col-12 col-md-4 single-ksa">
                         <img className="img-fluid" src={staricon} alt="star icon" />
                         <h2>If it aint about a dream</h2>
                         <p>No matter where life takes me find me with a smile, we are suited to be happy</p>

@@ -34,21 +34,22 @@ class SingleEvent extends React.Component {
         return(
              <div className="event col-12">
                 <div className="row">
-                    <div className="col-7">
-                        <div className="event-info">
-                        <h1>{this.props.name}</h1>
-                        <p>{this.props.date}</p>
-                        <p>Obsazenost : {this.props.registeredCount} / 25</p>
-                        <p>{this.props.desc}</p>
-                        </div>
-                        <div className="btns-holder">
-                        <Button  onClick={this.toggle}>Registrovat</Button>
-                        <Button className="more-info" onClick={this.collapseToggle}>{this.state.collapse? "Skrýt detaily" : "Více informací"}</Button>
-                        </div>
-
-                    </div>
-                    <div className="col-5">
+                    <div className="col-md-5 col-12 order-md-2">
                         <img src={this.props.img}  alt={this.props.imgalt} className="event-preview"/>
+                    </div>
+                    <div className="col-md-7 col-12">
+                        <div className="row no-gutters down-push">
+                            <div className="event-info">
+                                <h1>{this.props.name}</h1>
+                                <p>{this.props.date}</p>
+                                <p>Obsazenost : {this.props.registeredCount} / 25</p>
+                                <p>{this.props.desc}</p>
+                            </div>
+                            <div className="btns-holder">
+                                <Button  onClick={this.toggle}>Registrovat</Button>
+                                <Button className="more-info" onClick={this.collapseToggle}>{this.state.collapse? "Skrýt detaily" : "Více informací"}</Button>
+                            </div>
+                        </div>
                     </div>
                     <Collapse isOpen={this.state.collapse} className="col-12">
                         {this.state.collapse && <div className="col-12 event-article">

@@ -9,9 +9,7 @@
     background-color: white;
     overflow: hidden;
     position: relative;
-    border: 1px solid white;
     border-radius: 3px;
-    padding-bottom: 1rem;
 }
 
 .event-preview {
@@ -34,25 +32,19 @@
     position: relative;
 }
 
-/* .sidepannel div::before {
-    content: "/";
-    color: $wine;
-    position: absolute;
-    font-weight: bold;
-    font-size: $xl;
-    top: 0px;
-    left: 0px;
-} */
-
 .more-info {
     margin-left: auto
 }
 
+.down-push {
+  height: 100%;
+}
+
 .btns-holder {
-    position: absolute;
-    bottom: 1.5rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-bottom: 1.5rem;
+    margin-top: auto;
     .btn {
         margin-right: 1.5rem;
     }
@@ -133,3 +125,380 @@
 
 }
 
+
+/*responsive */
+
+@media (max-width: 768px) {
+ .btns-holder .btn {
+   margin-top: 1rem;
+ }
+}
+
+
+/* react quill */
+/*!
+ * Quill Editor v1.3.0
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
+  .event-article {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .event-article > * {
+    cursor: text;
+  }
+  .event-article p,
+  .event-article ol,
+  .event-article ul,
+  .event-article pre,
+  .event-article blockquote,
+  .event-article h1,
+  .event-article h2,
+  .event-article h3,
+  .event-article h4,
+  .event-article h5,
+  .event-article h6 {
+    margin: 0;
+    padding: 0;
+    counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  }
+  .event-article ol,
+  .event-article ul {
+    padding-left: 1.5em;
+  }
+  .event-article ol > li,
+  .event-article ul > li {
+    list-style-type: none;
+  }
+  .event-article ul > li::before {
+    content: '\2022';
+  }
+  .event-article ul[data-checked=true],
+  .event-article ul[data-checked=false] {
+    pointer-events: none;
+  }
+  .event-article ul[data-checked=true] > li *,
+  .event-article ul[data-checked=false] > li * {
+    pointer-events: all;
+  }
+  .event-article ul[data-checked=true] > li::before,
+  .event-article ul[data-checked=false] > li::before {
+    color: #777;
+    cursor: pointer;
+    pointer-events: all;
+  }
+  .event-article ul[data-checked=true] > li::before {
+    content: '\2611';
+  }
+  .event-article ul[data-checked=false] > li::before {
+    content: '\2610';
+  }
+  .event-article li::before {
+    display: inline-block;
+    white-space: nowrap;
+    width: 1.2em;
+  }
+  .event-article li:not(.ql-direction-rtl)::before {
+    margin-left: -1.5em;
+    margin-right: 0.3em;
+    text-align: right;
+  }
+  .event-article li.ql-direction-rtl::before {
+    margin-left: 0.3em;
+    margin-right: -1.5em;
+  }
+  .event-article ol li:not(.ql-direction-rtl),
+  .event-article ul li:not(.ql-direction-rtl) {
+    padding-left: 1.5em;
+  }
+  .event-article ol li.ql-direction-rtl,
+  .event-article ul li.ql-direction-rtl {
+    padding-right: 1.5em;
+  }
+  .event-article ol li {
+    counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+    counter-increment: list-0;
+  }
+  .event-article ol li:before {
+    content: counter(list-0, decimal) '. ';
+  }
+  .event-article ol li.ql-indent-1 {
+    counter-increment: list-1;
+  }
+  .event-article ol li.ql-indent-1:before {
+    content: counter(list-1, lower-alpha) '. ';
+  }
+  .event-article ol li.ql-indent-1 {
+    counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  }
+  .event-article ol li.ql-indent-2 {
+    counter-increment: list-2;
+  }
+  .event-article ol li.ql-indent-2:before {
+    content: counter(list-2, lower-roman) '. ';
+  }
+  .event-article ol li.ql-indent-2 {
+    counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  }
+  .event-article ol li.ql-indent-3 {
+    counter-increment: list-3;
+  }
+  .event-article ol li.ql-indent-3:before {
+    content: counter(list-3, decimal) '. ';
+  }
+  .event-article ol li.ql-indent-3 {
+    counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
+  }
+  .event-article ol li.ql-indent-4 {
+    counter-increment: list-4;
+  }
+  .event-article ol li.ql-indent-4:before {
+    content: counter(list-4, lower-alpha) '. ';
+  }
+  .event-article ol li.ql-indent-4 {
+    counter-reset: list-5 list-6 list-7 list-8 list-9;
+  }
+  .event-article ol li.ql-indent-5 {
+    counter-increment: list-5;
+  }
+  .event-article ol li.ql-indent-5:before {
+    content: counter(list-5, lower-roman) '. ';
+  }
+  .event-article ol li.ql-indent-5 {
+    counter-reset: list-6 list-7 list-8 list-9;
+  }
+  .event-article ol li.ql-indent-6 {
+    counter-increment: list-6;
+  }
+  .event-article ol li.ql-indent-6:before {
+    content: counter(list-6, decimal) '. ';
+  }
+  .event-article ol li.ql-indent-6 {
+    counter-reset: list-7 list-8 list-9;
+  }
+  .event-article ol li.ql-indent-7 {
+    counter-increment: list-7;
+  }
+  .event-article ol li.ql-indent-7:before {
+    content: counter(list-7, lower-alpha) '. ';
+  }
+  .event-article ol li.ql-indent-7 {
+    counter-reset: list-8 list-9;
+  }
+  .event-article ol li.ql-indent-8 {
+    counter-increment: list-8;
+  }
+  .event-article ol li.ql-indent-8:before {
+    content: counter(list-8, lower-roman) '. ';
+  }
+  .event-article ol li.ql-indent-8 {
+    counter-reset: list-9;
+  }
+  .event-article ol li.ql-indent-9 {
+    counter-increment: list-9;
+  }
+  .event-article ol li.ql-indent-9:before {
+    content: counter(list-9, decimal) '. ';
+  }
+  .event-article .ql-indent-1:not(.ql-direction-rtl) {
+    padding-left: 3em;
+  }
+  .event-article li.ql-indent-1:not(.ql-direction-rtl) {
+    padding-left: 4.5em;
+  }
+  .event-article .ql-indent-1.ql-direction-rtl.ql-align-right {
+    padding-right: 3em;
+  }
+  .event-article li.ql-indent-1.ql-direction-rtl.ql-align-right {
+    padding-right: 4.5em;
+  }
+  .event-article .ql-indent-2:not(.ql-direction-rtl) {
+    padding-left: 6em;
+  }
+  .event-article li.ql-indent-2:not(.ql-direction-rtl) {
+    padding-left: 7.5em;
+  }
+  .event-article .ql-indent-2.ql-direction-rtl.ql-align-right {
+    padding-right: 6em;
+  }
+  .event-article li.ql-indent-2.ql-direction-rtl.ql-align-right {
+    padding-right: 7.5em;
+  }
+  .event-article .ql-indent-3:not(.ql-direction-rtl) {
+    padding-left: 9em;
+  }
+  .event-article li.ql-indent-3:not(.ql-direction-rtl) {
+    padding-left: 10.5em;
+  }
+  .event-article .ql-indent-3.ql-direction-rtl.ql-align-right {
+    padding-right: 9em;
+  }
+  .event-article li.ql-indent-3.ql-direction-rtl.ql-align-right {
+    padding-right: 10.5em;
+  }
+  .event-article .ql-indent-4:not(.ql-direction-rtl) {
+    padding-left: 12em;
+  }
+  .event-article li.ql-indent-4:not(.ql-direction-rtl) {
+    padding-left: 13.5em;
+  }
+  .event-article .ql-indent-4.ql-direction-rtl.ql-align-right {
+    padding-right: 12em;
+  }
+  .event-article li.ql-indent-4.ql-direction-rtl.ql-align-right {
+    padding-right: 13.5em;
+  }
+  .event-article .ql-indent-5:not(.ql-direction-rtl) {
+    padding-left: 15em;
+  }
+  .event-article li.ql-indent-5:not(.ql-direction-rtl) {
+    padding-left: 16.5em;
+  }
+  .event-article .ql-indent-5.ql-direction-rtl.ql-align-right {
+    padding-right: 15em;
+  }
+  .event-article li.ql-indent-5.ql-direction-rtl.ql-align-right {
+    padding-right: 16.5em;
+  }
+  .event-article .ql-indent-6:not(.ql-direction-rtl) {
+    padding-left: 18em;
+  }
+  .event-article li.ql-indent-6:not(.ql-direction-rtl) {
+    padding-left: 19.5em;
+  }
+  .event-article .ql-indent-6.ql-direction-rtl.ql-align-right {
+    padding-right: 18em;
+  }
+  .event-article li.ql-indent-6.ql-direction-rtl.ql-align-right {
+    padding-right: 19.5em;
+  }
+  .event-article .ql-indent-7:not(.ql-direction-rtl) {
+    padding-left: 21em;
+  }
+  .event-article li.ql-indent-7:not(.ql-direction-rtl) {
+    padding-left: 22.5em;
+  }
+  .event-article .ql-indent-7.ql-direction-rtl.ql-align-right {
+    padding-right: 21em;
+  }
+  .event-article li.ql-indent-7.ql-direction-rtl.ql-align-right {
+    padding-right: 22.5em;
+  }
+  .event-article .ql-indent-8:not(.ql-direction-rtl) {
+    padding-left: 24em;
+  }
+  .event-article li.ql-indent-8:not(.ql-direction-rtl) {
+    padding-left: 25.5em;
+  }
+  .event-article .ql-indent-8.ql-direction-rtl.ql-align-right {
+    padding-right: 24em;
+  }
+  .event-article li.ql-indent-8.ql-direction-rtl.ql-align-right {
+    padding-right: 25.5em;
+  }
+  .event-article .ql-indent-9:not(.ql-direction-rtl) {
+    padding-left: 27em;
+  }
+  .event-article li.ql-indent-9:not(.ql-direction-rtl) {
+    padding-left: 28.5em;
+  }
+  .event-article .ql-indent-9.ql-direction-rtl.ql-align-right {
+    padding-right: 27em;
+  }
+  .event-article li.ql-indent-9.ql-direction-rtl.ql-align-right {
+    padding-right: 28.5em;
+  }
+  .event-article .ql-video {
+    display: block;
+    max-width: 100%;
+  }
+  .event-article .ql-video.ql-align-center {
+    margin: 0 auto;
+  }
+  .event-article .ql-video.ql-align-right {
+    margin: 0 0 0 auto;
+  }
+  .event-article .ql-bg-black {
+    background-color: #000;
+  }
+  .event-article .ql-bg-red {
+    background-color: #e60000;
+  }
+  .event-article .ql-bg-orange {
+    background-color: #f90;
+  }
+  .event-article .ql-bg-yellow {
+    background-color: #ff0;
+  }
+  .event-article .ql-bg-green {
+    background-color: #008a00;
+  }
+  .event-article .ql-bg-blue {
+    background-color: #06c;
+  }
+  .event-article .ql-bg-purple {
+    background-color: #93f;
+  }
+  .event-article .ql-color-white {
+    color: #fff;
+  }
+  .event-article .ql-color-red {
+    color: #e60000;
+  }
+  .event-article .ql-color-orange {
+    color: #f90;
+  }
+  .event-article .ql-color-yellow {
+    color: #ff0;
+  }
+  .event-article .ql-color-green {
+    color: #008a00;
+  }
+  .event-article .ql-color-blue {
+    color: #06c;
+  }
+  .event-article .ql-color-purple {
+    color: #93f;
+  }
+  .event-article .ql-font-serif {
+    font-family: Georgia, Times New Roman, serif;
+  }
+  .event-article .ql-font-monospace {
+    font-family: Monaco, Courier New, monospace;
+  }
+  .event-article .ql-size-small {
+    font-size: 0.75em;
+  }
+  .event-article .ql-size-large {
+    font-size: 1.5em;
+  }
+  .event-article .ql-size-huge {
+    font-size: 2.5em;
+  }
+  .event-article .ql-direction-rtl {
+    direction: rtl;
+    text-align: inherit;
+  }
+  .event-article .ql-align-center {
+    text-align: center;
+  }
+  .event-article .ql-align-justify {
+    text-align: justify;
+  }
+  .event-article .ql-align-right {
+    text-align: right;
+  }
+  .event-article .ql-embed-selected {
+    border: 1px solid #777;
+    user-select: none;
+  }
+  .ql-editor.ql-blank::before {
+    color: rgba(0,0,0,0.6);
+    content: attr(data-placeholder);
+    font-style: italic;
+    pointer-events: none;
+    position: absolute;
+  }
+  

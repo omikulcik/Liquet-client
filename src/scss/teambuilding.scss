@@ -11,3 +11,11 @@
 .cta {
     padding-bottom: 5rem;
 }
+
+/*responsive */
+
+@media (max-width: 992px) {
+    .big-photo {
+        background-image: none;
+    }
+}

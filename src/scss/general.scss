@@ -13,7 +13,6 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: $s;
     color: $black;
-/*     background-color: $cream; */
 }
 
 img {max-width: 100%;}
@@ -93,4 +92,12 @@ a:hover {
 .not-found {
   margin-top: 15rem;
   text-align: center;
+}
+
+/* responsive */
+
+@media (max-width:1200px){
+  html {
+    font-size: 58%;
+  }
 }

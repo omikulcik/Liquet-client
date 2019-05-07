@@ -7,7 +7,15 @@ export default () => (
     <footer className="container-fluid footer-container fluid0">
         <div className="container">
             <div className="row footer-cols">
-                <div className="col-3 footer-col">
+                <div className="col-md-5 col-12 order-md-1 footer-col social-sites">
+                   <div className="row">
+                        <div className="mx-auto" >
+                            <h4>Sledujte nás</h4>
+                            <Link to="" >Facebook</Link>
+                        </div>
+                   </div>
+                </div>
+                <div className="col-md-3 col-6 footer-col">
                    <div className="row">
                         <div className="mx-auto" >
                             <h4>Menu</h4>
@@ -19,15 +27,7 @@ export default () => (
                         </div>
                    </div>
                 </div>
-                <div className="col-5 footer-col">
-                   <div className="row">
-                        <div className="mx-auto" >
-                            <h4>Sledujte nás</h4>
-                            <Link to="" >Facebook</Link>
-                        </div>
-                   </div>
-                </div>
-                <div className="col-4 footer-col">
+                <div className="col-md-4 col-6 order-md-2 footer-col">
                    <div className="row">
                         <div className="mx-auto" >
                             <h4>Kontakt</h4>

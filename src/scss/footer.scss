@@ -35,3 +35,10 @@
         margin-bottom: 0;
     }
 }
+
+@media (max-width: 768px) {
+    .social-sites {
+        padding-bottom: 3rem;
+        border: none;
+    }
+}

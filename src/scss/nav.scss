@@ -15,7 +15,7 @@
 }
 
 .nav-link {
-	padding: 0 20px !important;
+	padding: 0 20px;
 	height: 45px;
 	line-height: 45px;
 }
@@ -86,3 +86,22 @@
 .nav-item {
 	margin-left: 2rem;
 }
+
+/* responsive */
+
+
+@media (max-width:992px){
+	.navbar-expand-lg .navbar-nav .nav-link {
+	  padding: 0;
+	}
+	.nav-link::after, .nav-link::before {
+		content: none
+	}
+  }
+
+
+@media (min-width:992px){
+	.navbar-expand-lg .navbar-nav .nav-link {
+	  padding: 0 2rem;
+	}
+  }

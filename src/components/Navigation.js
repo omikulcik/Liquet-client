@@ -30,7 +30,7 @@ import logo from "../images/logov2.png"
       return (
         <div className="container-fluid nav-container">
           <div className="container" >
-            <Navbar light expand="md">
+            <Navbar light expand="lg">
               <NavbarBrand href="/"><img src={logo} alt="vineon" /></NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
