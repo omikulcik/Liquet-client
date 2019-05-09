@@ -15,8 +15,8 @@ const Home = () => (
         <div className="container-fluid fluid0 parallax homepage d-none d-md-flex">
             <div className="container my-auto">
                 <h1 className="claim-header">
-                   <span className="main-claim">Do I make you scare ?</span><br />
-                   <span className="main-claim">Really cant</span>
+                   <span className="main-claim">Pellentesque habitant morbi tristique?</span><br />
+                   <span className="main-claim">Consectetuer adipiscing elit</span>
                 </h1>
             </div>
         </div>
@@ -24,13 +24,13 @@ const Home = () => (
             <div className="container">
                 <div className={"row"}>
                     <div className={"col-12"}>
-                        <h1>A jak to vlastně funguje ?</h1>
+                        <h1>Pellentesque habitant morbi tristique?</h1>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-12 col-md-6">
                         <p>
-                            Nepříjde mi, že bych dělal dost a tak dělám víc než kdo jinej. Jsem CMM, vyjebanej CMM. Je tu tvoje buchta vlastně už tvoje ex. Ona mi jen uklízí a vaří oběd. Prcal jsem ji jen jednou a už mě miluje ale já ji ne.
+                        Praesent vitae arcu tempor neque lacinia pretium. Aliquam ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aliquam erat volutpat. Praesent id justo in neque elementum ultrices.
                         </p>
                     </div>
                     <div className="col-md-6 d-none d-md-flex stain">
@@ -43,24 +43,24 @@ const Home = () => (
             <div className="container">
                 <div className="row">
                     <div className="col-12 section-h-col text-center">
-                        <h1>I never take a day off</h1>
+                        <h1>Lorem ipsum dolor sit amet</h1>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-6 col-md-4 single-ksa">
                         <img className="img-fluid" src={wineicon} alt="wine icon" />
-                        <h2>If it aint about a dream</h2>
-                        <p>No matter where life takes me find me with a smile, we are suited to be happy</p>
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>Pellentesque pretium lectus id turpis. Vivamus porttitor turpis ac leo. Etiam quis quam.</p>
                     </div>
                     <div className="col-6 col-md-4 single-ksa">
                         <img className="img-fluid" src={foodicon} alt="food icon" />
-                        <h2>If it aint about a dream</h2>
-                        <p>No matter where life takes me find me with a smile, we are suited to be happy</p>
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>Pellentesque pretium lectus id turpis. Vivamus porttitor turpis ac leo. Etiam quis quam.</p>
                     </div>
                     <div className="col-12 col-md-4 single-ksa">
                         <img className="img-fluid" src={staricon} alt="star icon" />
-                        <h2>If it aint about a dream</h2>
-                        <p>No matter where life takes me find me with a smile, we are suited to be happy</p>
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>Pellentesque pretium lectus id turpis. Vivamus porttitor turpis ac leo. Etiam quis quam.</p>
                     </div>
                 </div>
             </div>
