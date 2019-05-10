@@ -8,7 +8,7 @@ cd to the project directory in your console.
 
 run - ```npm run start```
 
-##Information
+## Information
 
 You should also try [administration app](https://github.com/omikulcik/Liquet-admin) for this project which lets you edit the events and manage the registered users.
 
