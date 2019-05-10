@@ -51,7 +51,7 @@ class SingleEvent extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <Collapse isOpen={this.state.collapse} className="col-12">
+                    <Collapse isOpen={this.state.collapse} className="col-12 order-md-3">
                         {this.state.collapse && <div className="col-12 event-article">
                             <div  dangerouslySetInnerHTML={{__html: this.props.article && this.props.article}}>
                             </div>
